@@ -1,26 +1,18 @@
-# ICEGODS 24/7 Tracker
+# 🧊 ICEGODS Table Bot
 
-ICEGODS is a Telegram bot system that tracks crypto wallets (ETH & SOL), manages subscriptions, and provides a dashboard for users. It supports payments via ETH/SOL and allows free trials.
+**ICEGODS Table Bot** is an advanced Telegram-based automation system built to manage subscriptions, process crypto payments, and serve analytics dashboards.  
+It’s designed for fast deployment via **Render**, **Fly.io**, or **Docker** — using a lightweight Python + Flask + Telegram Bot API stack.
 
-## Features
+---
 
-- Wallet Tracking: ETH & SOL
-- Telegram Bot Commands:
-  - `/start` - Main menu
-  - `/profile` - Show your profile
-  - `/bots` - Manage your bots
-  - `/buy` - Buy subscription
-  - `/free` - Free trial
-  - `/help` - Help info
-- Subscription Plans:
-  - Monthly: $10
-  - Yearly: $80
-- Free 3-day trial
-- Payment Integration: ETH & SOL
-- Admin Dashboard
+## 🚀 Features
+- Automated Telegram bot for business or crypto use-cases
+- SQLite + SQLAlchemy backend (can switch to PostgreSQL)
+- Async-ready (aiohttp + web3 integrations)
+- Telegram webhook with Flask endpoint
+- Environment-based secure configuration via `.env`
+- Easy deploy with Docker or Render
 
-## Setup
+---
 
-1. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
+## 🧩 Structure

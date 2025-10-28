@@ -1,0 +1,41 @@
+# ==========================================
+# 🚀 ICEGODS BOT - Render Deployment Config
+# ==========================================
+
+services:
+  - type: web
+    name: icegods-bot
+    env: python
+    plan: free
+
+    buildCommand: |
+      pip install -r requirements.txt
+
+    startCommand: |
+      python3 start_icegods.py
+
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_ADMIN_ID
+        sync: false
+      - key: TELEGRAM_CHANNEL_ID
+        sync: false
+      - key: DATABASE_URL
+        value: sqlite:///subscriptions.db
+      - key: WEBHOOK_URL
+        sync: false
+      - key: PORT
+        value: 5000
+      - key: HOST
+        value: 0.0.0.0
+      - key: DEBUG
+        value: "False"
+
+# ==========================================
+# 💡 NOTES
+# ==========================================
+# - This config uses the free Render plan.
+# - Environment variables marked "sync: false" should be added manually via dashboard.
+# - SQLite is fine for testing; you can upgrade to PostgreSQL for production.
+# - Webhook URL should match your Render-generated domain (e.g. https://icegods-bot.onrender.com/webhook)  
